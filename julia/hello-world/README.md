@@ -1,30 +1,41 @@
-# Hello World
+# How to debug
 
-Welcome to Hello World on Exercism's Julia Track.
-If you need help running the tests or submitting your code, check out `HELP.md`.
+To help with debugging, you can use the fact that all console output will be captured and shown in the test results window. You can output any value by passing it to `@show`.
+`@show` shows an expression and its result, while returning its result.
 
-## Instructions
+```julia
+@show uppercase("hello") # HELLO will be shown as debug output
+```
 
-The classical introductory exercise. Just say "Hello, World!".
+# Functions
 
-["Hello, World!"](http://en.wikipedia.org/wiki/%22Hello,_world!%22_program) is
-the traditional first program for beginning programming in a new language
-or environment.
+Create a function with two inputs 
 
-The objectives are simple:
+```julia
+julia> function f(a, b)
+       @show a b
+       return (@show a^b) / 1000
+       end 
+f (generic function with 1 method)
 
-- Write a function that returns the string "Hello, World!".
-- Run the test suite and make sure that it succeeds.
-- Submit your solution and check it at the website.
+julia> f(3,5)
+a = 3
+b = 5
+a ^ b = 243
+0.243
+```
 
-If everything goes well, you will be ready to fetch your first real exercise.
+## Run tests
 
-## Source
+To run tests
 
-### Created by
+```
+Julia hello-world/runtests.jl
+```
 
-- @SaschaMann
-
-### Based on
-
-This is an exercise to introduce users to using Exercism - http://en.wikipedia.org/wiki/%22Hello,_world!%22_program
+```julia
+Hello World!
+"Hello, World!" = "Hello, World!"
+Test Summary: | Pass  Total  Time
+Say Hi!       |    1      1  0.1s 
+``` 
