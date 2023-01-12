@@ -9,7 +9,7 @@ To help with debugging, you can use the fact that all console output will be cap
 
 # Functions
 
-Create a function with two inputs 
+Create a functions in julia console cli
 
 ```julia
 julia> function f(a, b)
@@ -38,4 +38,4 @@ Hello World!
 "Hello, World!" = "Hello, World!"
 Test Summary: | Pass  Total  Time
 Say Hi!       |    1      1  0.1s 
-``` 
+```
